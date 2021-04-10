@@ -1,11 +1,14 @@
 # Overview
 
-[[Blog]](https://openai.com/blog/dall-e/) [[Paper]](https://arxiv.org/abs/2102.12092) [[Model Card]](model_card.md) [[Usage]](notebooks/usage.ipynb)
+This is an unofficial port of the dalle encoder/decoder models and checkpoints to Jax + Haiku, while preserving the same output. See `examples/test_consistency.py` for details.
 
-This is the official PyTorch package for the discrete VAE used for DALL·E. The transformer used to generate the images from the text is not part of this code release.
+To run the examples, the checkpoints must be downloaded into the examples folder:
+```shell
+cd examples
+wget https://cdn.openai.com/dall-e/encoder.pkl
+wget https://cdn.openai.com/dall-e/decoder.pkl
+```
 
-# Installation
-
-Before running [the example notebook](notebooks/usage.ipynb), you will need to install the package using
-
-	pip install DALL-E
+# TODO
+- [ ] Test/benchmark on TPUs
+- [ ] Add dataloading code to bulk preprocess tfrecord datasets for dall-e training

@@ -16,3 +16,6 @@ __pycache__
 *.swn
 *.swo
 *.swp
+
+# Models
+*.pkl
